@@ -1,0 +1,127 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background: aliceblue;
+    height: 15vh;
+    font-size: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.add-Book-Container {
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid black;
+}
+
+.btn {
+    width: 20vw;
+    height: 5vh;
+    font-size: 20px;
+    border: none;
+    background-color: white;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    transition: 0.5s;
+}
+
+.btn:hover {
+    background-color: aquamarine;
+}
+
+footer {
+    background-color: aliceblue;
+    position: fixed;
+    width: 100%;
+    height: 4vh;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.add-Book-Modal {
+    position: fixed;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    width: 300px;
+    border-radius: 20px;
+    background-color: bisque;
+    text-align: center;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 0.2s ease-in-out;
+}
+
+.add-Book-Modal.active {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.book-Details {
+    height: 385px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
+    font-size: 20px;
+    justify-content: center;
+    align-items:center ;
+}
+
+.book-Details h3 {
+    font-weight: lighter;
+    font-size: xx-large;
+    color: rgb(77, 77, 77);
+}
+
+.input {
+    width: 260px;
+    height: 45px;
+    font-size: 16px;
+    text-align: left;
+    padding-left: 10px;
+    border: none;
+    border-radius: 10px;
+    transition: sclae 300ms;
+}
+
+.input:focus {
+    outline: 1px solid green;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    scale: 1.05;
+}
+
+.is-Read{
+    color: rgb(56, 55, 55);
+}
+
+input[type="checkbox"] {
+    margin-left: 10px;
+    width: 20px;
+    height: 16px;
+    border: 0.15em solid gray;
+}
+
+input[type="checkbox"]:focus {
+    outline: max(2px, 0.15em) solid violet;
+    outline-offset: max(2px, 0.15em);
+  }
+
+.submit-Btn {
+    height: 45px;
+    width: 260px;
+    font-size: 20px;
+    font-weight: lighter;
+    color: rgb(66, 66, 66);
+    border: none;
+    background-color: rgb(185, 255, 185);
+    border-radius: 20px;
+}
