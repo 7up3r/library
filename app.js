@@ -62,8 +62,8 @@ const createBookCard = (book) => {
     removeBtn.onclick = removeBook;
 
     title.textContent = book.title;
-    author.textContent = book.author;
-    pages.textContent = book.pages;
+    author.textContent = 'by ' + book.author;
+    pages.textContent = book.pages + ' pages';
     removeBtn.textContent = 'Remove';
 
     if(book.isRead) {
