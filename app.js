@@ -61,9 +61,9 @@ const createBookCard = (book) => {
     isReadBtn.onclick = toggleRead;
     removeBtn.onclick = removeBook;
 
-    title.textContent = book.title;
-    author.textContent = 'by ' + book.author;
-    pages.textContent = book.pages + ' pages';
+    title.textContent = formatName(book.title);
+    author.textContent = 'by ' + formatName(book.author);
+    pages.textContent = book.pages + ' Pages';
     removeBtn.textContent = 'Remove';
 
     if(book.isRead) {
@@ -130,6 +130,14 @@ const updateBookGrid = () => {
         createBookCard(book);
     }
 }
+
+const formatName = (name) => {
+    const words = name.split(' ');
+    const formatted = words.map((word) => {
+        return word.charAt(0).toUpperCase() + word.split(1);
+    }).join(' ');
+    return formatted;
+} 
 
 addBookBtn.onclick = openAddBookModal;
 bookDetails.onsubmit = addBook;
